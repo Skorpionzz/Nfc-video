@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Entrando al Ketaverso…</title>
+  <style>
+    body {
+      margin: 0;
+      background: black;
+      overflow: hidden;
+      font-family: Arial, sans-serif;
+    }
+    video {
+      width: 100vw;
+      height: 100vh;
+      object-fit: cover;
+    }
+    #texto {
+      position: fixed;
+      top: 20px;
+      width: 100%;
+      text-align: center;
+      color: #00ffcc;
+      font-size: 26px;
+      font-weight: bold;
+      z-index: 10;
+      text-shadow: 0 0 10px #00ffcc;
+    }
+    #sonido {
+      position: fixed;
+      bottom: 25px;
+      width: 100%;
+      text-align: center;
+      color: white;
+      font-size: 20px;
+      z-index: 10;
+      opacity: 0.85;
+    }
+  </style>
+</head>
+<body>
+
+<div id="texto">🌀 TOCA PARA ENTRAR AL KETAVERSO 🌀</div>
+
+<video id="video" autoplay muted loop playsinline>
+  <source src="rickroll.mp4" type="video/mp4">
+</video>
+
+<div id="sonido">🔊 TOCA EN CUALQUIER PARTE PARA ACTIVAR SONIDO</div>
+
+<script>
+  document.body.addEventListener('click', () => {
+    const v = document.getElementById('video');
+    v.muted = false;
+    v.play();
+  });
+</script>
+
+</body>
+  </html>
